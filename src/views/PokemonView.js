@@ -4,7 +4,7 @@ import PokemonForm from '../components/Pokemon/Form.js';
 import PokemonInfo from '../components/Pokemon/Info.js';
 
 export default function PokemonView() {
-  const [pokemonName, setPokemonName] = useState('');
+  const [pokemonName, setPokemonName] = useState('')
 
   return (
     <>
@@ -14,3 +14,34 @@ export default function PokemonView() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export default function PokemonView() {
+//   const [pokemonName, setPokemonName] = useState('');
+
+//   return (
+//     <>
+//       <PokemonForm onSubmit={setPokemonName} />
+//       <PokemonInfo pokemonName={pokemonName} />
+//       <ToastContainer autoClose={3000} />
+//     </>
+//   );
+// }

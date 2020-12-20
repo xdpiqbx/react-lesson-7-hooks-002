@@ -108,14 +108,15 @@ export default function Friends() {
   const [friends] = useState(initalFriends);
   const [filter, setFilter] = useState('');
 
-  // const visibleFriends = useMemo(() => {
-  //   console.log('Фильтруем друзей ' + Date.now());
-  //   return friends.filter(friend => friend.toLowerCase().includes(filter));
-  // }, [filter, friends]);
+  // Запомнит последний результат помещённых внутрь вычеслений
+  // пока не изменится зависимость из массива
+  const visibleFriends = useMemo(() => {
+    return friends.filter(friend => friend.toLowerCase().includes(filter))
+  }, [filter, friends])
 
-  const visibleFriends = friends.filter(friend =>
-    friend.toLowerCase().includes(filter),
-  );
+  // const visibleFriends = friends.filter(friend =>
+  //   friend.toLowerCase().includes(filter),
+  // );
 
   return (
     <div>
@@ -130,3 +131,29 @@ export default function Friends() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // const visibleFriends = useMemo(() => {
+  //   console.log('Фильтруем друзей ' + Date.now());
+  //   return friends.filter(friend => friend.toLowerCase().includes(filter));
+  // }, [filter, friends]);
